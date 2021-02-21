@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle">
+        <item name="android:fontFamily">@font/roboto_slab_thin</item>
+    </style>
+
+    <style name="TextStyle.Body">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextStyle.Body.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextStyle.Title.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="TextStyle.Subtitle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextStyle.Subtitle.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="ButtonStyle">
+        <item name="android:fontFamily">@font/basic</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonStyle.Primary">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

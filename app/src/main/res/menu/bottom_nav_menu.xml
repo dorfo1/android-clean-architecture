@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_games"
+        android:icon="@drawable/ic_game_24"
+        android:title="@string/title_games" />
+
+    <item
+        android:id="@+id/navigation_streams"
+        android:icon="@drawable/ic_live_stream_24"
+        android:title="@string/title_streams" />
+
+
+</menu>
