@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Koin Sample</string>
-    <string name="key">zg6c0kkh5u6lyxv8oohzvxxaz1ihy2</string>
-    <string name="secret">9i5nyxq35uclirntplmcnuqacjh4xn</string>
-    <string name="access_token">itsp7a8byjylngosa9kwu4za0erxnj</string>
+ 
     <string name="title_activity_main">MainActivity</string>
     <string name="title_games">Jogos</string>
     <string name="title_streams">Streams</string>
@@ -15,4 +13,9 @@
     <string name="live_hub_title">Canais ao vivo</string>
     <string name="clip_hub_title">Clipes</string>
     <string name="see_more">Ver mais</string>
+    
+       //GERAR CREDENCIAIS
+    <string name="key">add chave</string>
+    <string name="secret">add secret</string>
+    <string name="access_token">token de acesso</string>
 </resources>
