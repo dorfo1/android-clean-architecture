@@ -58,7 +58,7 @@ class TopGamesFragment : Fragment(R.layout.fragment_games) {
     }
 
     private fun showError() {
-        Toast.makeText(context,getString(R.string.default_error_message),Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"Error",Toast.LENGTH_LONG).show()
     }
 
     override fun onDestroy() {

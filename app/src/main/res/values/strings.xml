@@ -14,7 +14,7 @@
     <string name="clip_hub_title">Clipes</string>
     <string name="see_more">Ver mais</string>
     
-       //GERAR CREDENCIAIS
+    //GERAR CREDENCIAIS
     <string name="key">add chave</string>
     <string name="secret">add secret</string>
     <string name="access_token">token de acesso</string>

@@ -1,6 +1,7 @@
 package com.example.koinsample.data.interactor
 
 import com.example.koinsample.core.base.Resource
+import com.example.koinsample.core.extensions.toFlowResource
 import com.example.koinsample.domain.entity.Game
 import com.example.koinsample.domain.interactor.FetchGames
 import com.example.koinsample.data.serivce.TwitchService
@@ -14,14 +15,9 @@ class FetchGamesImpl(
 
 
     override suspend fun execute(params: Unit): Flow<Resource<List<Game>>> = flow {
-        emit(Resource.Loading())
-        try {
-            val response = service.getGames()
-            emit(Resource.Success(response.games.map { Game.fromResponse(it) }))
-        } catch (ex : Exception){
-            emit(Resource.Error<List<Game>>(ex))
-        }
-    }
+        val response = service.getGames()
+        emit(response.games.map { Game.fromResponse(it) })
+    }.toFlowResource()
 
 
 
