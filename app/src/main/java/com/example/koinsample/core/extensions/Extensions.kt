@@ -51,6 +51,15 @@ fun <T> Flow<T>.toFlowResource(): Flow<Resource<T>> = flow {
 }
 
 
+fun <T,O> Flow<T>.asResource(map : (T) -> O): Flow<Resource<O>> = flow {
+    onStart { emit(Resource.Loading<O>()) }
+        .map { map.invoke(it) }
+        .onEach { emit(Resource.Success(it)) }
+        .catch { emit(Resource.Error<O>(Exception(it))) }
+        .collect()
+}
+
+
 
 
 

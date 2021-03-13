@@ -1,6 +1,8 @@
 package com.example.koinsample.data.interactor
 
+import androidx.lifecycle.asLiveData
 import com.example.koinsample.core.base.Resource
+import com.example.koinsample.core.extensions.asResource
 import com.example.koinsample.core.extensions.toFlowResource
 import com.example.koinsample.domain.entity.Game
 import com.example.koinsample.domain.interactor.FetchGames
@@ -15,10 +17,10 @@ class FetchGamesImpl(
 
 
     override suspend fun execute(params: Unit): Flow<Resource<List<Game>>> = flow {
-        val response = service.getGames()
-        emit(response.games.map { Game.fromResponse(it) })
-    }.toFlowResource()
-
+        emit(service.getGames())
+    }.asResource{
+        it.games.map { gameResponse -> Game.fromResponse(gameResponse) }
+    }
 
 
 }
